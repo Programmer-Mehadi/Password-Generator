@@ -24,8 +24,8 @@
         <div>
           <div>
             <label class="label" for=""
-              >Select Length: <span id="length_value">10</span
-            ></label>
+              >Password Length: <span id="length_value">10</span></label
+            >
             <input
               type="range"
               name=""
@@ -37,9 +37,13 @@
             />
           </div>
           <div class="input_container">
-            <input class="input_field" type="text" />
-            <button class="btn"><i class="fa-solid fa-clipboard"></i></button>
-            <button class="btn"><i class="fa-solid fa-rotate"></i></button>
+            <input id="password_input" class="input_field" type="text" />
+            <button id="copy" onclick="copyPassword()" class="btn">
+              <i class="fa-solid fa-clipboard"></i>
+            </button>
+            <button id="reload" class="btn">
+              <i class="fa-solid fa-rotate"></i>
+            </button>
           </div>
         </div>
       </section>

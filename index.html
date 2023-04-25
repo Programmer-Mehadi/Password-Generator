@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main>
+      <!-- header -->
+      <header>
+        <h1 class="header">
+          <span>&#9757;</span> Password Generator <span>&#9996;</span>
+        </h1>
+      </header>
+      <!-- body -->
+      <section class="main_container">
+        <div>
+          <div>
+            <label class="label" for=""
+              >Select Length: <span id="length_value">10</span
+            ></label>
+            <input
+              type="range"
+              name=""
+              id="length_field"
+              min="0"
+              max="100"
+              value="10"
+              class="range_field"
+            />
+          </div>
+          <div class="input_container">
+            <input class="input_field" type="text" />
+            <button class="btn"><i class="fa-solid fa-clipboard"></i></button>
+            <button class="btn"><i class="fa-solid fa-rotate"></i></button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

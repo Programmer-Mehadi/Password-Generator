@@ -19,7 +19,6 @@ textToPassLengthField.oninput = function (e) {
 };
 
 function copyPasswordTextToPass() {
-
   // Select the text field
   textToPassPasswordInput.select();
   textToPassPasswordInput.setSelectionRange(0, 99999); // For mobile devices
@@ -51,11 +50,14 @@ function generateTextToPassword() {
   let newSentence = removeSpace(sentence);
   const array = generateArray(newSentence.length);
   let password = "";
-  for (let i = 0; i < textToPassLengthField.value; i++) {
-    password += getRandomIndex(newSentence, array);
+  if (newSentence.length > 0) {
+    for (let i = 0; i < textToPassLengthField.value; i++) {
+      password += getRandomIndex(newSentence, array);
+    }
+    if (password !== undefined) {
+      textToPassPasswordInput.value = password;
+    }
   }
-  console.log(password);
-  textToPassPasswordInput.value = password;
 }
 textToPassReloadBtn.addEventListener("click", () => {
   generateTextToPassword();
